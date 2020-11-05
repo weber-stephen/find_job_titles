@@ -50,7 +50,10 @@ def longest_match(matches):
         longest = next(matches)
         if longest is None:
             return
-    return
+    except StopIteration:
+        pass
+    finally:
+        del matches
 
     for elt in matches:
         # if (a contains b) or (b contains a)
