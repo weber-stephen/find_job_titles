@@ -50,7 +50,9 @@ def longest_match(matches):
         longest = next(matches)
         if longest is None:
             return
-    except StopIteration:
+    # except StopIteration:
+        # return
+        # Flag generator is exhausted
         return
 
     for elt in matches:
