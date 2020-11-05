@@ -46,14 +46,9 @@ def longest_match(matches):
     """
     find respective longest matches from all overlapping aho corasick matches
     """
-    try:
-        longest = next(matches)
-        if longest is None:
-            return
-    except StopIteration:
-        pass
-    finally:
-        del matches
+    longest = next(matches)
+    if longest is None:
+        return
 
     for elt in matches:
         # if (a contains b) or (b contains a)
